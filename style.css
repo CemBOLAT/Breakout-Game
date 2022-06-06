@@ -1,0 +1,165 @@
+:root{
+    color-scheme: dark;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --transition: all linear 300ms;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family:cursive;
+}
+#title{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+#levelDiv{
+    text-align: center;
+    font-size: 30px;  
+    margin-bottom: 20px; 
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: var(--transition);
+}
+#canvas{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 1000px;
+    border: 1px solid white;
+    padding: 10px;
+}
+.block{
+    width: 100px;
+    height: 20px;
+    background-color: rgb(145, 170, 5);
+    position: absolute;
+    transition: var(--transition);
+}
+.usersBlock{
+    background-color: #047c18;
+    transition: all linear 10ms;
+    width: 110px;
+    height: 20px;
+    position: absolute;
+}
+.ball{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: aqua;
+    animation: linear colorChange 3500ms;
+    animation-iteration-count: infinite;
+    border: 2px white solid;
+}
+@keyframes colorChange {
+    0%{
+        background: linear-gradient(90deg,red,yellow);
+    }
+    20%{
+        background: linear-gradient(135deg,rgb(0, 255, 98),blue);
+    }
+    40%{
+        background: linear-gradient(180deg,rgb(255, 153, 0),rgb(255, 0, 170));
+    }
+    60%{
+        background: linear-gradient(225deg,rgb(187, 255, 0),rgb(0, 174, 255));
+    }
+    80%{
+        background: linear-gradient(270deg,rgb(255, 0, 0),white);
+    }
+    100%{
+        background: linear-gradient(315deg,rgb(128, 128, 128),gold);
+    }
+}
+#congartzMessage{
+    transition: var(--transition);
+    opacity: 0;
+    height: 2.5rem;
+    z-index: -99;
+    user-select: none;
+}
+#nextLevelButton{
+    transition: var(--transition);
+    opacity: 0;
+    margin-top: 0.5rem;
+    z-index: -9;
+    user-select: none; 
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    animation: forwards 500ms shadowAnimation;
+    animation-iteration-count: infinite;
+}
+@keyframes shadowAnimation {
+    0%{
+        box-shadow: 0px 0px 2px 0px white;
+    }
+    50%{
+        box-shadow: 0px 0px 5px 0px white;
+    }
+    100%{
+        box-shadow: 0px 0px 8px 0px white;
+    }
+}
+#thanks-box-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    transition: var(--transition);
+    opacity: 0;
+}
+#thanks-box{
+    font-size: 50px;
+    justify-content: center;
+    transition: var(--transition);
+}
+#its-me{
+    color: aquamarine;
+    box-sizing: content-box;
+    font-size: 50px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+#myPage{
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    padding: 20px;
+    transition: var(--transition);
+}
+#myPage:hover{
+    animation: ease-out 1500ms moving;
+    transform: scale(1.05);
+}
+#its-me:hover{
+    color: aqua;
+}
+#its-me:active{
+    color: red;
+}
+@keyframes moving {
+    0%{
+        transform: rotateY(120deg);
+    }
+    50%{
+        transform: rotateY(240deg);
+
+    }
+    100%{
+        transform: rotateY(360deg);
+
+    }
+}
