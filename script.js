@@ -143,7 +143,6 @@ function ballsActionResults(){
     ballDraw()
     ballHitsBarriers()
 }
-timer = setInterval(ballsActionResults,30)
 function ballHitsBarriers(){
     //wall
     if(ballPosition[0] >= 980 ||
@@ -287,4 +286,10 @@ function nextLevelButton(){
         ballDraw()
         ballsActionResults()
 }
+}
+const startButton = document.querySelector("#startButton")
+function startGame(){
+    startButton.style.opacity =  0
+    startButton.style.zIndex =  -99
+    timer = setInterval(ballsActionResults,30)
 }
