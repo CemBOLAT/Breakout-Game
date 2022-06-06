@@ -84,11 +84,9 @@
     z-index: -99;
     user-select: none;
 }
-#nextLevelButton{
+.button{
     transition: var(--transition);
-    opacity: 0;
     margin-top: 0.5rem;
-    z-index: -9;
     user-select: none; 
     padding: 10px;
     border-radius: 10px;
@@ -100,6 +98,14 @@
     margin-left: auto;
     animation: forwards 500ms shadowAnimation;
     animation-iteration-count: infinite;
+}
+#startButton{
+    font-size: 30px;
+    margin-top: 20px;
+}
+#nextLevelButton{
+    z-index: -9;
+    opacity: 0;
 }
 @keyframes shadowAnimation {
     0%{
